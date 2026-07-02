@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maya Cafe Hukka Bar & Sekuwa Corner</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    color:#333;
+    background:#fff;
+    line-height:1.6;
+}
+
+/* Navbar */
+
+nav{
+    position:sticky;
+    top:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    z-index:999;
+}
+
+nav h2{
+    color:#2563eb;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#2563eb;
+}
+
+/* Hero */
+
+.hero{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:#fff;
+    text-align:center;
+    padding:80px 20px;
+}
+
+/* Photo */
+
+.hero-photo{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+    margin:0 auto 25px;
+    border:5px solid rgba(255,255,255,.6);
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+/* If image is missing */
+.hero-photo:not([src]),
+.hero-photo[src=""]{
+    display:none;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 30px;
+    background:#fbbf24;
+    color:#222;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#f59e0b;
+}
+
+/* Sections */
+
+section{
+    padding:70px 8%;
+}
+
+.title{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:40px;
+    color:#1f2937;
+}
+
+/* About */
+
+#about p{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    color:#555;
+}
+
+/* Cards */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.menu-card{
+    background:#f8fafc;
+    border-radius:15px;
+    padding:30px;
+    text-align:center;
+    transition:.3s;
+    border:1px solid #ddd;
+}
+
+.menu-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.menu-card i{
+    font-size:45px;
+    color:#2563eb;
+    margin-bottom:15px;
+}
+
+.menu-card h3{
+    margin-bottom:10px;
+}
+
+.menu-card p{
+    color:#666;
+}
+
+/* Certificate */
+
+.cert-box{
+    max-width:500px;
+    margin:auto;
+    text-align:center;
+    border:2px dashed #2563eb;
+    padding:30px;
+    border-radius:15px;
+    background:#f8fafc;
+}
+
+.cert-box img{
+    width:100%;
+    border-radius:10px;
+}
+
+.cert-box i{
+    font-size:60px;
+    color:#2563eb;
+    margin-bottom:20px;
+}
+
+/* Contact */
+
+#contact{
+    background:#f9fafb;
+}
+
+.contact-list{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding:18px;
+    background:#fff;
+    border-left:5px solid #2563eb;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+
+.contact-item i{
+    color:#2563eb;
+    font-size:22px;
+    width:25px;
+}
+
+/* Footer */
+
+footer{
+    background:#1f2937;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:15px;
+}
+
+nav ul{
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero-photo{
+    width:150px;
+    height:150px;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+<h2>Maya Cafe</h2>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#menu">Menu</a></li>
+<li><a href="#certificate">Certificate</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- Hero -->
+
+<section class="hero">
+
+<!-- 
+IMPORTANT:
+1. Put your photo in the SAME folder as this HTML file.
+2. Name it exactly:
+Kul_bdr.jpg
+(or change the filename below if different)
+-->
+
+<img src="Kul_bdr.jpeg"
+     alt="Kul Bahadur Regmi"
+     class="hero-photo"
+     onerror="this.src='https://via.placeholder.com/180x180.png?text=Owner+Photo';">
+
+<h1>Maya Cafe Hukka Bar & Sekuwa Corner</h1>
+
+<p>
+Authentic Sekuwa, refreshing Hukka, delicious food, and warm hospitality in Hattigauda, Nepal.
+</p>
+
+<a href="#contact" class="btn">Reserve a Table</a>
+
+</section>
+
+<!-- About -->
+
+<section id="about">
+
+<h2 class="title">About Us</h2>
+
+<p>
+Maya Cafe Hukka Bar & Sekuwa Corner is proudly owned and managed by
+<strong>Kul Bahadur Regmi</strong>.
+We specialize in delicious charcoal-grilled sekuwa, premium hukka flavors,
+refreshing beverages, and excellent customer service. Whether you're meeting
+friends, celebrating special occasions, or simply relaxing, our welcoming
+atmosphere makes every visit memorable.
+</p>
+
+</section>
+
+<!-- Menu -->
+
+<section id="menu">
+
+<h2 class="title">Our Menu & Services</h2>
+
+<div class="menu-grid">
+
+<div class="menu-card">
+<i class="fas fa-drumstick-bite"></i>
+<h3>Sekuwa</h3>
+<p>Fresh Chicken, Buff and Pork Sekuwa grilled over charcoal.</p>
+</div>
+
+<div class="menu-card">
+<i class="fas fa-smoking"></i>
+<h3>Hukka Lounge</h3>
+<p>Enjoy more than 20 premium hukka flavors in a relaxing environment.</p>
+</div>
+
+<div class="menu-card">
+<i class="fas fa-mug-hot"></i>
+<h3>Cafe</h3>
+<p>Tea, Coffee, Soft Drinks, Snacks and delicious food.</p>
+</div>
+
+<div class="menu-card">
+<i class="fas fa-users"></i>
+<h3>Private Events</h3>
+<p>Birthday parties, family gatherings and special celebrations.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Certificate -->
+
+<!-- Certificate Section -->
+<section id="certificate">
+
+    <h2 class="title">Our Certificates</h2>
+
+    <div class="certificate-grid">
+
+        <div class="certificate-card">
+            <img src="certificate1.jpeg" alt="Business Registration Certificate">
+           
+        </div>
+
+        <div class="certificate-card">
+            <img src="certificate2.jpeg" alt="PAN Certificate">
+          
+        </div>
+
+        <div class="certificate-card">
+            <img src="certificate3.jpeg" alt="Food License">
+            
+        </div>
+
+        <div class="certificate-card">
+            <img src="certificate4.jpeg" alt="Local Government Certificate">
+           
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact -->
+
+<section id="contact">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="contact-list">
+
+<div class="contact-item">
+<i class="fas fa-envelope"></i>
+<span>kbrregmi@gmail.com</span>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-location-dot"></i>
+<span>Hattigauda Marga(Ramsita Temple,Budhanilkantha), Nepal</span>
+</div>
+<div class="contact-item">
+<i class="fas fa-zip"></i>
+<span>Postal code :44600</span>
+</div>
+
+<div class="contact-item">
+<i class="fas fa-phone"></i>
+<span>Phone :9849800776</span>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2025 Maya Cafe Hukka Bar & Sekuwa Corner. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
